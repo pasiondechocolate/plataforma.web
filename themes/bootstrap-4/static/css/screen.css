@@ -1,0 +1,135 @@
+/* Hielito de Limon */
+
+html,
+body { width: 100%; height: 100%; }
+body {
+    font-family: 'Noto Serif', serif;
+}
+a          { color: #e4ae03; text-decoration: none; }
+a:hover,
+a:focus    { color: #e4ae03; text-decoration: underline; }
+a:active,
+a:visited  { color: #e4ae03; text-decoration: none; }
+
+h1 { font-size: 3.2rem; font-family: 'Charm', cursive; }
+h2 { font-size: 2.6rem; font-family: 'Charm', cursive; }
+h3 { font-size: 2.2rem; font-family: 'Charm', cursive; }
+h4 { font-size: 1.8rem; font-family: 'Charm', cursive; }
+h5 { font-size: 1.4rem; font-family: 'Charm', cursive; }
+h6 { font-size: 1.0rem; font-family: 'Charm', cursive; }
+
+pre {
+    font-family: 'Droid Sans Mono', 'Liberation Mono', monospace;
+    font-size: 12pt;
+    background: none repeat scroll 0 0 #F0F0F0;
+    font-style: normal;
+    letter-spacing: 0.015em;
+    line-height: 130%;
+    padding: 0.7em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+blockquote {
+    padding: 0.7em;
+    font-size: 1.2em;
+}
+
+/* Navigation */
+
+#navigation {
+    border-color: rgba(34, 34, 34, 0.05);
+    background-color: #f6da86;
+    color: #FFF;
+}
+
+/* Headers */
+
+.head-welcome {
+    background-color: #260a07;
+    height: 100vh;
+    min-height: 600px;
+    background-image: url('../../../articulos/brownies-corazones-oro/brownie-corazones-oro-2048x1365.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.head-site {
+    background-color: transparent;
+    padding: 80px 0;
+}
+.head-site-name {
+    color: #f6da86;
+}
+.head-site-description {
+    color: #FFF;
+}
+.head-common {
+    background-color: #260a07;
+    height: 200px;
+}
+
+/* Sections */
+
+.sec-services {
+    background-color: #260a07;
+    padding: 240px 0;
+}
+.sec-portfolio {
+    background-color: #FFF;
+    padding: 320px 0;
+}
+.sec-contact {
+    background-color: #f6da86;
+    padding: 120px 0;
+}
+
+/* Footer */
+
+footer {
+    padding-top: 180px;
+    padding-bottom: 40px;
+    background-color: #260a07;
+}
+.footer-text {
+    color: #f6da86;
+}
+
+/* Pelican index, article, page */
+
+.index-title {
+	margin-top: 1rem;
+	margin-bottom: 1.25rem;
+}
+
+.article-post {
+	margin-top: 1.5rem;
+	margin-bottom: 4rem;
+}
+.article-post-title {
+	margin-bottom: 0.5rem;
+}
+.article-post-meta {
+	margin-bottom: 1.25rem;
+	color: #999;
+}
+
+.page-post {
+	margin-top: 1.5rem;
+	margin-bottom: 4rem;
+}
+.page-post-title {
+	margin-top: 1rem;
+	margin-bottom: 1.25rem;
+}
+
+/* Responsive
+@media only screen and (max-width: 990px) {
+
+}
+@media only screen and (max-width: 580px) {
+
+}
+@media only screen and (max-width: 300px) {
+
+}
+*/

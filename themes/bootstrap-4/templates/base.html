@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% block meta_tags %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ SITEURL }}/favicon.ico">
+    <link rel="icon" href="{{ SITEURL }}/theme/images/icon-hires.png" sizes="192x192">
+    <link rel="icon" href="{{ SITEURL }}/theme/images/icon-normal.png" sizes="128x128">
+    <link rel="apple-touch-icon" href="{{ SITEURL }}/theme/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="{{ SITEURL }}/theme/images/apple-touch-icon-76x76.png" sizes="76x76">
+    <link rel="apple-touch-icon" href="{{ SITEURL }}/theme/images/apple-touch-icon-120x120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="{{ SITEURL }}/theme/images/apple-touch-icon-152x152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="{{ SITEURL }}/theme/images/apple-touch-icon-180x180.png" sizes="180x180">
+{% if FEED_ALL_RSS %}
+    <link rel="alternate" href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" title="{{ SITENAME }} Full RSS Feed" />
+{% endif %}
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/vendor/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/screen.css">
+{% if USE_REMOTE_SERVICES %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Charm|Noto+Serif">
+{% endif %}
+  </head>
+  <body>
+{% include 'navigation.html' %}
+{% if output_file == 'index.html' %}
+{%   include 'header-welcome.html' %}
+{% else %}
+{%   include 'header-common.html' %}
+{% endif %}
+    <div class="container">
+{% block content %}{% endblock %}
+    </div>
+{% if output_file == 'index.html' %}
+{%   include 'section-contact.html' %}
+{% endif %}
+{% include 'footer.html' %}
+    <script src="{{ SITEURL }}/theme/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="{{ SITEURL }}/theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+

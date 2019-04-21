@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }}{% endblock %}
+
+{% block meta_tags %}
+    {% if output_file == 'index.html' %}
+    <meta name="description" content="{{ SITEDESCRIPTION }}">
+    <meta name="keywords" content="{{ SITEKEYWORDS }}">
+    <meta name="author" content="{{ AUTHOR }}">
+    <meta itemprop="name" content="{{ SITENAME }}">
+    <meta itemprop="description" content="{{ SITEDESCRIPTION }}">
+    <meta itemprop="image" content="{{ SITEURL }}/{{ SITELOGO }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="{{ SITETWITTER }}">
+    <meta name="twitter:title" content="{{ SITENAME }}">
+    <meta name="twitter:description" content="{{ SITEDESCRIPTION }}">
+    <meta name="twitter:image:src" content="{{ SITEURL }}/{{ SITELOGO }}">
+    <meta property="og:title" content="{{ SITENAME }}">
+    <meta property="og:type" content="summary">
+    <meta property="og:url" content="{{ SITEURL }}/{{ output_file }}">
+    <meta property="og:image" content="{{ SITEURL }}/{{ SITELOGO }}">
+    <meta property="og:description" content="{{ SITEDESCRIPTION }}">
+    <meta property="og:site_name" content="{{ SITENAME }}">
+    {% else %}
+    <meta name="description" content="Índice de publicaciones.">
+    <meta name="keywords" content="">
+    <meta name="author" content="{{ AUTHOR }}">
+    <meta itemprop="name" content="Índice - {{ SITENAME }}">
+    <meta itemprop="description" content="Índice de publicaciones.">
+    <meta itemprop="image" content="{{ SITEURL }}/{{ SITELOGO }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="{{ SITETWITTER }}">
+    <meta name="twitter:title" content="Índice - {{ SITENAME }}">
+    <meta name="twitter:description" content="Índice de publicaciones.">
+    <meta name="twitter:image:src" content="{{ SITEURL }}/{{ SITELOGO }}">
+    <meta property="og:title" content="Índice - {{ SITENAME }}">
+    <meta property="og:type" content="summary">
+    <meta property="og:url" content="{{ SITEURL }}/{{ output_file }}">
+    <meta property="og:image" content="{{ SITEURL }}/{{ SITELOGO }}">
+    <meta property="og:description" content="Índice de publicaciones.">
+    <meta property="og:site_name" content="{{ SITENAME }}">
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+        <main>
+{% if articles %}
+          <section class="sec-products" id="products">
+            <h2 class="index-title">Productos</h2>
+{%   for article in articles_page.object_list %}
+            <div class="row">
+              <div class="col-sm-4">
+{%     if article.preview %}
+                <a href="{{ SITEURL }}/{{ article.url }}"><img class="img-fluid mb-4 mr-2" src="{{ SITEURL }}/{{ article.url }}{{ article.preview }}" alt="Imagen previa"></a>
+{%     endif %}
+              </div>
+              <div class="col-sm-8">
+                <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+{{ article.summary }}
+              </div>
+            </div>
+{%   endfor %}
+          </section>
+{% else %}
+          <p>No hay contenido.</p>
+{% endif %}
+        </main>
+{% endblock %}
