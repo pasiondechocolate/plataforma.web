@@ -9,26 +9,26 @@
     <meta itemprop="name" content="{{ page.title }}">
     <meta itemprop="description" content="{{ page.summary|striptags }}">
     {% if page.image %}
-    <meta itemprop="image" content="{{ SITEURL }}/{{ page.url }}{{ page.image }}">
+    <meta itemprop="image" content="/{{ page.url }}{{ page.image }}">
     {% elif page.preview %}
-    <meta itemprop="image" content="{{ SITEURL }}/{{ page.url }}{{ page.preview }}">
+    <meta itemprop="image" content="/{{ page.url }}{{ page.preview }}">
     {% endif %}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="{{ SITETWITTER }}">
     <meta name="twitter:title" content="{{ page.title }}">
     <meta name="twitter:description" content="{{ page.summary|striptags }}">
     {% if page.image %}
-    <meta name="twitter:image:src" content="{{ SITEURL }}/{{ page.url }}{{ page.image }}">
+    <meta name="twitter:image:src" content="/{{ page.url }}{{ page.image }}">
     {% elif page.preview %}
-    <meta name="twitter:image:src" content="{{ SITEURL }}/{{ page.url }}{{ page.preview }}">
+    <meta name="twitter:image:src" content="/{{ page.url }}{{ page.preview }}">
     {% endif %}
     <meta property="og:title" content="{{ page.title }}">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}">
+    <meta property="og:url" content="/{{ page.url }}">
     {% if page.image %}
-    <meta property="og:image" content="{{ SITEURL }}/{{ page.url }}{{ page.image }}">
+    <meta property="og:image" content="/{{ page.url }}{{ page.image }}">
     {% elif page.preview %}
-    <meta property="og:image" content="{{ SITEURL }}/{{ page.url }}{{ page.preview }}">
+    <meta property="og:image" content="/{{ page.url }}{{ page.preview }}">
     {% endif %}
     <meta property="og:description" content="{{ page.summary|striptags }}">
     <meta property="og:site_name" content="{{ SITENAME }}">
