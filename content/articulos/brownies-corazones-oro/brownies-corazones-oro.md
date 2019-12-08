@@ -6,7 +6,7 @@ Date: 2019-02-11 15:50
 Modified: 2019-02-11 15:50
 Author: Rosy
 Category: articulos
-Preview: preview.jpg
+Preview: brownie-corazones-oro-400x300.jpg
 
 
 Haz de este 14 de febrero una fecha inolvidable. Impresiona a tu amor con nuestros brownies adornados con corazones y chispas de oro comestible, de 24 quilates.

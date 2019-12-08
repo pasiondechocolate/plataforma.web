@@ -6,13 +6,6 @@
     <meta name="description" content="{{ article.summary|striptags }}">
     <meta name="keywords" content="{{ [article.tags|join(', '), article.category]|join(', ') }}">
     <meta name="author" content="{{ article.author.name }}">
-    <meta itemprop="name" content="{{ article.title }}">
-    <meta itemprop="description" content="{{ article.summary|striptags }}">
-    {% if article.image %}
-    <meta itemprop="image" content="/{{ article.url }}{{ article.image }}">
-    {% elif article.preview %}
-    <meta itemprop="image" content="/{{ article.url }}{{ article.preview }}">
-    {% endif %}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="{{ SITETWITTER }}">
     <meta name="twitter:title" content="{{ article.title }}">
